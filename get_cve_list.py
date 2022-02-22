@@ -6,12 +6,12 @@ def download():
     req = requests.get(url)
     filename = "cve.json"
     if req.status_code != 200:
-        print('下载异常')
+        print('Download error!')
         return
     try:
         with open(filename, 'wb') as f:
             f.write(req.content)
-            print('下载成功')
+            print('Download succeeded!')
     except Exception as e:
         print(e)
 
@@ -21,10 +21,10 @@ def json_read():
         jsonData=json.load(f)
     for row in jsonData:
         s.append(row['CVE']+"\n")
-    print("json的行数为： ",len(s))
+    print("json's lines:  ",len(s))
     with open("cve.list",'w+') as d:
         d.writelines(s)
-    print("CVE已输出至 cve.list 中"）
+    print("CVEs list has output to cve.list"）
     d.close()
 
 if __name__ == '__main__':

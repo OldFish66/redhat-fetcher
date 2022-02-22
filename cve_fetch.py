@@ -174,5 +174,5 @@ if __name__ == '__main__':
     async_example = AsnycGrab(cve_list, 100)   #the value of max thread shouldn't too high
     async_example.eventloop()
     endtime=datetime.datetime.now()
-    print("程序执行时间：",starttime)
-    print("程序执行了",(endtime - starttime).seconds," 秒")
+    print("Program was executed at:",starttime)
+    print("Program was executed for ",(endtime - starttime).seconds," seconds")
