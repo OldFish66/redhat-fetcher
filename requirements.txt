@@ -1,0 +1,4 @@
+aiohttp==3.7.4.post0
+asyncio==3.4.3
+json5==0.9.6
+requests==2.26.0
